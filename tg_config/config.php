@@ -28,7 +28,7 @@ $soap_connection_info = array(
  * Can add few user id with few accounts (GM ranks can be different for each user.)
  */
 
-$clients['TgUserID1'] = array('soap_user' => 'username', 'soap_pass' => 'username');
+$clients['TgUserID1'] = array('soap_user' => 'username', 'soap_pass' => 'password');
 
 /**
  * $clients['TgUserID1'] = array('soap_user' => "username", 'soap_pass' => "username");
