@@ -31,11 +31,11 @@ $soap_connection_info = array(
 $clients['TgUserID1'] = array('soap_user' => 'username', 'soap_pass' => 'password');
 
 /**
- * $clients['TgUserID1'] = array('soap_user' => "username", 'soap_pass' => "username");
- * $clients['TgUserID2'] = array('soap_user' => "username", 'soap_pass' => "username");
- * $clients['TgUserID3'] = array('soap_user' => "username", 'soap_pass' => "username");
- * $clients['TgUserID4'] = array('soap_user' => "username", 'soap_pass' => "username");
- * $clients['TgUserID5'] = array('soap_user' => "username", 'soap_pass' => "username");
+ * $clients['TgUserID1'] = array('soap_user' => "username", 'soap_pass' => "password");
+ * $clients['TgUserID2'] = array('soap_user' => "username", 'soap_pass' => "password");
+ * $clients['TgUserID3'] = array('soap_user' => "username", 'soap_pass' => "password");
+ * $clients['TgUserID4'] = array('soap_user' => "username", 'soap_pass' => "password");
+ * $clients['TgUserID5'] = array('soap_user' => "username", 'soap_pass' => "password");
  * ...
  *
  * Add more client if needed.
