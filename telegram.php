@@ -28,15 +28,17 @@ function RemoteCommandWithSOAP($username, $password, $COMMAND)
 {
     global $soap_connection_info;
     $result = '';
-    $conn = new SoapClient(NULL, array(
-        'location' => 'http://' . $soap_connection_info['soap_host'] . ':' . $soap_connection_info['soap_port'] . '/',
-        'uri' => $soap_connection_info['soap_uri'],
-        'style' => SOAP_RPC,
-        'login' => $username,
-        'password' => $password
-    ));
+    
     try {
+        $conn = new SoapClient(NULL, array(
+            'location' => 'http://' . $soap_connection_info['soap_host'] . ':' . $soap_connection_info['soap_port'] . '/',
+            'uri' => $soap_connection_info['soap_uri'],
+            'style' => SOAP_RPC,
+            'login' => $username,
+            'password' => $password
+        ));
         $result = $conn->executeCommand(new SoapParam($COMMAND, 'command'));
+        unset($conn);
     } catch (Exception $e) {
 
         if (!empty(Debug_Mode)) {
@@ -49,7 +51,6 @@ function RemoteCommandWithSOAP($username, $password, $COMMAND)
             $result = 'There is no such command!';
         }
     }
-    unset($conn);
     return $result;
 }
 
