@@ -15,7 +15,7 @@ define('Debug_Mode', false); // Change it to true if want enable debug mode.
  * Your soap connection information
  */
 $soap_connection_info = array(
-    'soap_uri' => 'urn:TC',
+    'soap_uri' => 'urn:TC', // urn:TC for TrinityCore, urn:AC for AzerothCore
     'soap_host' => '127.0.0.1',
     'soap_port' => '7878'
 );
